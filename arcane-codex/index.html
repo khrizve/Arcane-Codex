@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Sorcerer</title>
+    <link rel="icon" type="image/png" href="assets/logo.jpg">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      xintegrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Particle container for the raining icons -->
+    <div class="particle-container"></div>
+
+    <header>
+      <nav class="nav-bar">
+        <!-- Logo Section -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/logo.jpg" alt="Rizve's Logo" />
+          </a>
+        </div>
+        <ul class="nav-items">
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="skills.html">My Skill</a></li>
+          <li><a href="certificate.html">Certification</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <!-- Hamburger icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="left-div">
+        <section id="quick-about" class="section">
+          <div class="head-text">
+            <h1>Greetings, traveler!</h1>
+          </div>
+          <div class="sub-text">
+            <h2>
+              <i>
+                Welcome to my realm, where code weaves magic and innovation
+                knows no bounds. I am Rizve, the Code Sorcerer, shaping the
+                future with every line I write.
+              </i>
+            </h2>
+          </div>
+          <div class="git">
+            <a
+              href="https://github.com/khrizve"
+              class="social-btn github"
+              target="_blank"
+              >Visit GitHub</a
+            >
+          </div>
+        </section>
+      </div>
+      <div class="right-div"></div>
+    </div>
+
+    <div class="code-head"><h2>Coding-Platform Profiles</h2></div>
+
+    <div class="platform-buttons">
+      <a
+        href="https://codeforces.com/profile/Rizve23"
+        class="platform-btn codeforces"
+        target="_blank"
+        >Codeforces</a
+      >
+
+      <a
+        href="https://atcoder.jp/users/Rizve_"
+        class="platform-btn atcoder"
+        target="_blank"
+        >AtCoder</a
+      >
+
+      <a
+        href="https://www.hackerrank.com/profile/rizve2019bd"
+        class="platform-btn hackerrank"
+        target="_blank"
+        >HackerRank</a
+      >
+      <a
+        href="https://leetcode.com/u/Rizve_Reza/"
+        class="platform-btn leetcode"
+        target="_blank"
+        >LeetCode</a
+      >
+    </div>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          <h3>Project 1</h3>
+          <p>Personal AI Assistant</p>
+        </div>
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <p>Image Encryption System</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="button-container">
+      <a href="projects.html"
+        ><button class="glow-button">View All Projects</button>
+      </a>
+    </div>
+
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <form
+        id="contactForm"
+        action="https://formspree.io/f/xldejjby"
+        method="POST"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="formStatus"></p>
+    </section>
+
+    <div class="follow">
+      <h2>Follow Me on</h2>
+    </div>
+
+    <div class="social-buttons">
+      <a
+        href="https://www.facebook.com/rizve.reza.158218"
+        class="social-btn facebook"
+        target="_blank"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+      <a
+        href="https://www.instagram.com/kh_rizve/"
+        class="social-btn instagram"
+        target="_blank"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+      <a href="https://x.com/rizve21" target="_blank" class="social-btn twitter"
+        ><i class="fa-brands fa-x-twitter"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/kh-rizve-reza"
+        class="social-btn linkedin"
+        target="_blank"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Code Sorcerer. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

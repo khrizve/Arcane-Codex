@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Skills</title>
+    <style>
+      /* Red and black color scheme with center alignment */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #0e0b1d; /* deep magical black-purple */
+        color: #e0d4f7; /* soft fantasy white-lavender */
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      /* Header */
+      header {
+        background-color: #1c1234; /* dark enchanted plum */
+        color: #a678f2; /* Enchanted Lilac */
+        padding: 30px;
+        text-align: center;
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        color: #a678f2; /* Enchanted Lilac */
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 2.5em;
+        color: #a678f2; /* Enchanted Lilac */
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .back-button {
+        margin: 20px 0;
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #8145c8;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 0 10px #8145c8, 0 0 20px #8145c8;
+        transition: 0.3s;
+      }
+
+      .back-button:hover {
+        background-color: #8145c8;
+        box-shadow: 0 0 15px #8145c8, 0 0 30px #8145c8;
+        transform: scale(1.05);
+      }
+
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        width: 90%;
+        max-width: 1300px;
+        margin-bottom: 10px;
+        padding: 30px;
+      }
+
+      .skill-card {
+        background-color: #0f0c29; /* Midnight gradient base */
+        padding: 30px;
+        border-radius: 10px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 0 15px #8145c8, 0 0 25px #8145c8;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 20px #a96df0, 0 0 40px #a96df0;
+      }
+
+      .skill-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 0 10px #a96df0, 0 0 20px #a96df0;
+      }
+
+      .skill-name {
+        font-size: 1.5em;
+        color: #8145c8; /* Dark red for the skill title */
+        margin: 10px 0;
+      }
+
+      .skill-description {
+        font-size: 1em;
+        color: #f8f8f2; /* Soft white text */
+      }
+      /* Footer */
+      footer {
+        background-color: #1b1834;
+        color: #a96df0;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Skills</h1>
+    </header>
+
+    <div class="lag"><h2>Languages</h2></div>
+
+    <div class="skills-container">
+      <!-- Skill 1 -->
+      <div class="skill-card">
+        <img src="assets/c.jpg" alt="C Language" class="skill-image" />
+        <div class="skill-name">C</div>
+        <p class="skill-description">
+          Skilled in C programming, with a strong grasp of memory management,
+          pointers, and efficient coding practices.
+        </p>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="skill-card">
+        <img src="assets/cpp.png" alt="Cpp" class="skill-image" />
+        <div class="skill-name">C++</div>
+        <p class="skill-description">
+          Proficient in C++, with expertise in object-oriented programming,
+          memory management, and efficient algorithm design.
+        </p>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="skill-card">
+        <img src="assets/java.jpg" alt="Java" class="skill-image" />
+        <div class="skill-name">Java</div>
+        <p class="skill-description">
+          Skilled in Java, with strong knowledge of object-oriented programming,
+          multithreading, and robust application development.
+        </p>
+      </div>
+
+      <!-- Skill 4 -->
+      <div class="skill-card">
+        <img src="assets/py.png" alt="Python" class="skill-image" />
+        <div class="skill-name">Python</div>
+        <p class="skill-description">
+          Skilled in Python for data analysis, web development, and creating
+          AI-based projects.
+        </p>
+      </div>
+
+      <!-- Skill 5 -->
+      <div class="skill-card">
+        <img src="assets/js.png" alt="JavaScript" class="skill-image" />
+        <div class="skill-name">JavaScript</div>
+        <p class="skill-description">
+          Experience in creating dynamic and interactive web applications using
+          modern JavaScript frameworks and libraries.
+        </p>
+      </div>
+
+      <!-- Skill 6 -->
+      <div class="skill-card">
+        <img src="assets/css.jpeg" alt="HTML & CSS" class="skill-image" />
+        <div class="skill-name">HTML & CSS</div>
+        <p class="skill-description">
+          Proficient in HTML & CSS to build responsive and accessible web
+          layouts with a focus on user experience.
+        </p>
+      </div>
+    </div>
+
+    <div class="lag"><h2>Tools & Frameworks</h2></div>
+    <div class="skills-container">
+      <!-- Skill 1 -->
+      <div class="skill-card">
+        <img
+          src="assets/android.jpg"
+          alt="Android Studio"
+          class="skill-image"
+        />
+        <div class="skill-name">Android Studio</div>
+        <p class="skill-description">
+          Skilled in Android Studio, with expertise in developing, debugging,
+          and optimizing Android applications. Proficient in using its tools,
+          emulators, and performance profilers for efficient app development.
+        </p>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="skill-card">
+        <img src="assets/qt.png" alt="qt" class="skill-image" />
+        <div class="skill-name">Qt</div>
+        <p class="skill-description">
+          Skilled in Qt, with expertise in developing cross-platform
+          applications using Qt Widgets and Qt Quick. Proficient in UI design,
+          event handling, and performance optimization.
+        </p>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="skill-card">
+        <img src="assets/node.jpg" alt="nodejs" class="skill-image" />
+        <div class="skill-name">NodeJs</div>
+        <p class="skill-description">
+          Experienced in Node.js, proficient in developing scalable backends,
+          managing asynchronous processes, and optimizing APIs for efficiency.
+        </p>
+      </div>
+    </div>
+
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-button">Back to Home</a>
+    <footer>
+      <p>&copy; 2025 Code Sorcerer. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

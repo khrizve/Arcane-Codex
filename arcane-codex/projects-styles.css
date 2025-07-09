@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+  background-color: #0e0b1d; /* deep magical black-purple */
+  color: #e0d4f7; /* soft fantasy white-lavender */
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #1c1234; /* dark enchanted plum */
+  color: #a678f2; /* Enchanted Lilac */
+  padding: 30px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #a678f2; /* Enchanted Lilac */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: #d0b3ff; /* light mystical purple */
+}
+
+.social-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* GitHub Button */
+.github {
+  background-color: #2c2c54;
+}
+
+.github:hover {
+  box-shadow: 0 0 10px #2c2c54, 0 0 20px #2c2c54, 0 0 30px #2c2c54;
+  transform: scale(1.05);
+}
+
+/* Projects Section */
+.section {
+  padding: 40px;
+  text-align: center;
+  border-bottom: 1px solid #a96df0;
+}
+
+.project-card {
+  background-color: #1c1234; /* same enchanted plum */
+  color: #e0d4f7;
+  border: 3px solid #a96df0;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(166, 120, 242, 0.5); /* Lilac Glow */
+}
+
+.project-card h3 {
+  color: #e0d4f7;
+}
+
+.project-card img {
+  width: 70%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.project-card p {
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background-color: #1c1234;
+  color: #a96df0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  header nav ul li {
+    margin: 0 10px;
+  }
+
+  .project-card {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 992px) {
+  .section {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .project-card {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+  }
+
+  header nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .project-card {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px;
+  }
+
+  .project-card {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
