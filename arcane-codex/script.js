@@ -34,10 +34,10 @@ function toggleMenu() {
 
 // Array of fantasy-themed Font Awesome icons
 const fantasyIcons = [
-  "fa-solid fa-hat-wizard",
-  "fa-solid fa-dragon",
-  "fa-solid fa-gem",
-  "fa-solid fa-dungeon",
+  // "fa-solid fa-hat-wizard",
+  // "fa-solid fa-dragon",
+  // "fa-solid fa-gem",
+  // "fa-solid fa-dungeon",
   "fa-solid fa-moon",
   "fa-solid fa-star",
   "fa-solid fa-code",
@@ -91,3 +91,4 @@ function createParticle() {
 
 // Generate particles at a regular interval
 const particleInterval = setInterval(createParticle, 300); // Create a new particle every 300 milliseconds
+
