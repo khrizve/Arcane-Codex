@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Skills</title>
+    <style>
+      /* Modern minimal variables */
+      :root {
+        --bg-primary: #0e0b1d;
+        --bg-secondary: #1c1234;
+        --accent-primary: #a678f2;
+        --accent-secondary: #8145c8;
+        --text-primary: #e0d4f7;
+        --text-secondary: #b8a8e6;
+        --card-bg: rgba(28, 18, 52, 0.6);
+        --glow-primary: 0 0 15px rgba(166, 120, 242, 0.7);
+        --glow-secondary: 0 0 30px rgba(166, 120, 242, 0.4);
+      }
+
+      /* Base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Navigation Bar */
+      .navbar {
+        width: 100%;
+        padding: 20px 30px;
+        background: var(--bg-secondary);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(166, 120, 242, 0.2);
+      }
+
+      .logo h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        background: linear-gradient(
+          to right,
+          var(--accent-primary),
+          var(--text-secondary)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-decoration: none;
+        letter-spacing: 1px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 30px;
+      }
+
+      .nav-link {
+        color: var(--text-primary);
+        text-decoration: none;
+        padding: 0.5rem;
+        font-weight: 500;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: var(--accent-primary);
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--accent-primary);
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      /* Section headers */
+      .section-header {
+        width: 100%;
+        text-align: center;
+        padding: 40px 20px 20px;
+        position: relative;
+      }
+
+      .section-header h2 {
+        font-size: 2.2rem;
+        color: var(--accent-primary);
+        display: inline-block;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .section-header h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: var(--accent-primary);
+        border-radius: 3px;
+      }
+
+      /* Skills container */
+      .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        width: 90%;
+        max-width: 1200px;
+        padding: 20px;
+        margin-bottom: 40px;
+      }
+
+      /* Skill cards */
+      .skill-card {
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 30px;
+        text-align: center;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(166, 120, 242, 0.1);
+      }
+
+      .skill-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--accent-primary),
+          var(--accent-secondary)
+        );
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--glow-primary), var(--glow-secondary);
+      }
+
+      .skill-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .skill-image {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: rgba(166, 120, 242, 0.1);
+        padding: 15px;
+        transition: all 0.3s ease;
+      }
+
+      .skill-card:hover .skill-image {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(166, 120, 242, 0.5);
+      }
+
+      .skill-name {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--accent-primary);
+        margin-bottom: 15px;
+      }
+
+      .skill-description {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      /* Footer */
+      footer {
+        width: 100%;
+        background: var(--bg-secondary);
+        color: var(--text-secondary);
+        text-align: center;
+        padding: 20px 0;
+        margin-top: auto;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .page-title h1 {
+          font-size: 2.5rem;
+        }
+
+        .skills-container {
+          grid-template-columns: 1fr;
+        }
+
+        .section-header h2 {
+          font-size: 1.8rem;
+        }
+
+        .navbar {
+          padding: 15px 20px;
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .nav-links {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .logo {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo"><h1>My Skills</h1></div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+      </div>
+    </nav>
+
+    <div class="section-header">
+      <h2>Languages</h2>
+    </div>
+
+    <div class="skills-container">
+      <!-- Skill 1 -->
+      <div class="skill-card">
+        <img src="assets/c.jpg" alt="C Language" class="skill-image" />
+        <div class="skill-name">C</div>
+        <p class="skill-description">
+          Skilled in C programming, with a strong grasp of memory management,
+          pointers, and efficient coding practices.
+        </p>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="skill-card">
+        <img src="assets/cpp.png" alt="Cpp" class="skill-image" />
+        <div class="skill-name">C++</div>
+        <p class="skill-description">
+          Proficient in C++, with expertise in object-oriented programming,
+          memory management, and efficient algorithm design.
+        </p>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="skill-card">
+        <img src="assets/java.jpg" alt="Java" class="skill-image" />
+        <div class="skill-name">Java</div>
+        <p class="skill-description">
+          Skilled in Java, with strong knowledge of object-oriented programming,
+          multithreading, and robust application development.
+        </p>
+      </div>
+
+      <!-- Skill 4 -->
+      <div class="skill-card">
+        <img src="assets/py.png" alt="Python" class="skill-image" />
+        <div class="skill-name">Python</div>
+        <p class="skill-description">
+          Skilled in Python for data analysis, web development, and creating
+          AI-based projects.
+        </p>
+      </div>
+
+      <!-- Skill 5 -->
+      <div class="skill-card">
+        <img src="assets/js.png" alt="JavaScript" class="skill-image" />
+        <div class="skill-name">JavaScript</div>
+        <p class="skill-description">
+          Experience in creating dynamic and interactive web applications using
+          modern JavaScript frameworks and libraries.
+        </p>
+      </div>
+
+      <!-- Skill 6 -->
+      <div class="skill-card">
+        <img src="assets/css.jpeg" alt="HTML & CSS" class="skill-image" />
+        <div class="skill-name">HTML & CSS</div>
+        <p class="skill-description">
+          Proficient in HTML & CSS to build responsive and accessible web
+          layouts with a focus on user experience.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <h2>Tools & Frameworks</h2>
+    </div>
+
+    <div class="skills-container">
+      <!-- Skill 1 -->
+      <div class="skill-card">
+        <img
+          src="assets/android.jpg"
+          alt="Android Studio"
+          class="skill-image"
+        />
+        <div class="skill-name">Android Studio</div>
+        <p class="skill-description">
+          Skilled in Android Studio, with expertise in developing, debugging,
+          and optimizing Android applications.
+        </p>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="skill-card">
+        <img src="assets/qt.png" alt="qt" class="skill-image" />
+        <div class="skill-name">Qt</div>
+        <p class="skill-description">
+          Skilled in Qt, with expertise in developing cross-platform
+          applications using Qt Widgets and Qt Quick.
+        </p>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="skill-card">
+        <img src="assets/node.jpg" alt="nodejs" class="skill-image" />
+        <div class="skill-name">NodeJs</div>
+        <p class="skill-description">
+          Experienced in Node.js, proficient in developing scalable backends,
+          managing asynchronous processes, and optimizing APIs for efficiency.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Code Sorcerer. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>codesor</title>
+  <link rel="icon" type="image/png" href="assets/right-img3.jpg">
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="animated-bg"></div>
+
+  <header>
+    <nav class="nav-bar">
+      <!-- Logo Section -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/right-img3.jpg" alt="codesor's Logo" />
+          <span><i class="fa-solid fa-code"></i> Sorcerer</span>
+        </a>
+      </div>
+      <ul class="nav-items">
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certificate.html">Certifications</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+      <!-- Hamburger icon -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Greetings, traveler!</h1>
+          <p class="hero-subtitle">Welcome to my realm, where logic <i class="fa-solid fa-code"></i> meets magic !</p>
+          <div class="hero-buttons">
+            <a href="https://github.com/khrizve" class="btn btn-primary" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              View Projects
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="profile-image"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platforms" class="section platforms-section">
+      <div class="container">
+        <h2 class="section-title">Coding Platforms</h2>
+        <div class="platform-grid">
+          <a href="https://codeforces.com/profile/Rizve23" class="platform-card" target="_blank">
+            <div class="platform-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Codeforces</h3>
+            <p>Competitive Programming</p>
+          </a>
+          <a href="https://atcoder.jp/users/kh_rizve" class="platform-card" target="_blank">
+            <div class="platform-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>AtCoder</h3>
+            <p>Algorithm Contests</p>
+          </a>
+          <a href="https://www.hackerrank.com/profile/kh_rizve" class="platform-card" target="_blank">
+            <div class="platform-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>HackerRank</h3>
+            <p>Coding Challenges</p>
+          </a>
+          <a href="https://leetcode.com/u/kh_rizve/" class="platform-card" target="_blank">
+            <div class="platform-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>LeetCode</h3>
+            <p>Technical Interviews</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/ai_assistant.jpeg" alt="Personal AI Assistant" />
+            </div>
+            <div class="project-content">
+              <h3>Personal AI Assistant</h3>
+              <p>An intelligent assistant that helps with daily tasks using natural language processing.</p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>AI Assistant</span>
+                <span>Machine Learning</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/encryption.jpg" alt="Image Encryption System" />
+            </div>
+            <div class="project-content">
+              <h3>Image Encryption System</h3>
+              <p>A secure system for encrypting and decrypting images using advanced cryptographic techniques.</p>
+              <div class="project-tech">
+                <span>Java</span>
+                <span>Cryptography</span>
+                <span>Android</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="view-all">
+          <a href="projects.html" class="btn btn-outline">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Let's create something amazing together</h3>
+            <p>I'm always open to discussing new opportunities, creative projects, or potential collaborations & personal queries.</p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/kh-rizve-reza" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://www.instagram.com/kh_rizve/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://x.com/rizve_19" target="_blank">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+              <a href="https://www.facebook.com/kh.rizve.reza" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+          <form id="contactForm" action="https://formspree.io/f/xldejjby" method="POST" class="contact-form">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p id="formStatus"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Code Sorcerer. Crafted with magic and code.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
